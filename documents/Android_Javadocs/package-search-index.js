@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.example.cyshare_frontend"},{"l":"com.example.cyshare_frontend.model"}]

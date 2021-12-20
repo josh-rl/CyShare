@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.cyshare_frontend">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="CyShare"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Demo2_final">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/api_key" />
+
+        <activity
+            android:name=".after_admin"
+            android:exported="true" />
+        <activity
+            android:name=".driver_home"
+            android:exported="true" />
+        <activity
+            android:name=".driver_booking_response"
+            android:exported="true" />
+
+        <activity
+            android:name=".driver_create_booking"
+            android:exported="true" />
+
+        <activity
+            android:name=".passenger_home"
+            android:exported="true" />
+        <activity
+            android:name=".passenger_create_request"
+            android:exported="true" />
+        <activity
+            android:name=".passenger_view_requests"
+            android:exported="true" />
+        <activity
+            android:name=".passenger_request_status"
+            android:exported="true" />
+        <activity
+            android:name=".driver_registration"
+            android:exported="true" />
+
+        <activity
+            android:name=".register_page"
+            android:exported="true" />
+
+        <activity android:name=".chat_page"
+            android:exported="true" />
+        <activity
+            android:name=".driver_view_bookings"
+            android:exported="true" />
+        <activity android:name=".admin_home"
+            android:exported="true" />
+        <activity android:name=".login_page"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

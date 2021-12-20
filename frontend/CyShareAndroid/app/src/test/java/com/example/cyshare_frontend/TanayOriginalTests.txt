@@ -1,0 +1,53 @@
+package com.example.cyshare_frontend;
+
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
+import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import org.junit.runner.RunWith;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
+import org.testng.annotations.Test;
+
+@RunWith(MockitoJUnitRunner.class)
+public class Mocking extends AppCompatActivity {
+
+    private String id;
+    private String pass;
+
+    public void Mocktesting(Class<server_data> server_dataClass) {
+    }
+
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_mocktesting);
+    }
+    // List mockedList = mock(List.class);
+    server_data test = mock(server_data.class);
+    @Mock
+    server_data test1;
+    @Test
+    public void checkid() {
+
+        test.setId("Tanay");
+        when(test.getID()).thenReturn("1");
+
+    }
+    public void checkPass()
+    {
+        test.setPassword("Tanay");
+        when(test.getPassword()).thenReturn("KingBhuwan");
+    }
+
+//    public void checkMethod()
+//    {
+//        verify(test.setId("tanay"),times(1);)
+//
+//    }
+
+}

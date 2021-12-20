@@ -1,0 +1,73 @@
+# .gitlab-ci.yml for CyShare App
+# stages:
+#   - mavenbuild
+#   - maventest
+#   - mavendeploy
+#   - androidbuild
+#   - androidtest
+
+# maven-build:
+#   stage: mavenbuild
+#   tags:
+#     - springboot_tag 
+#   script:
+#     - cd backend
+#     - cd CyShare
+#     - mvn package -B
+#   artifacts:
+#     paths:
+#       - backend/CyShare/target/*.jar
+
+# maven-test:
+#   stage: maventest
+#   tags:
+#     - SB_testing1
+#   script:
+#     - cd backend
+#     - cd CyShare
+#     - mvn test
+#   artifacts:
+#     paths:
+#       - backend/CyShare/target/*.jar
+
+# autoDeploy:
+#   stage: mavendeploy
+#   tags:
+#     - springboot_tag
+#   script:
+#      - cd backend/CyShare
+#      - mvn package
+#      - sudo mv target/*.jar /target/web-demo.jar
+#      - sudo systemctl stop system-web-demo
+#      - sudo systemctl start system-web-demo
+
+# android-build:
+#   image: alvrme/alpine-android:android-31-jdk11
+#   stage: androidbuild
+#   only:
+#     - main
+#   before_script:
+#     - export GRADLE_USER_HOME='pwd'/.gradle
+#     - chmod +x ./frontend/CyShareAndroid/gradlew
+#   tags:
+#     - android_tag
+#   script:
+#     - cd frontend/CyShareAndroid
+#     - ./gradlew build
+#   artifacts:
+#     paths:
+#       - /frontend/CyShareAndroid/app/build/outputs/
+
+# android-test:
+#   image: alvrme/alpine-android:android-31-jdk11
+#   stage: androidtest
+#   only:
+#     - main
+#   before_script:
+#     - export GRADLE_USER_HOME='pwd'/.gradle
+#     - chmod +x ./frontend/CyShareAndroid/gradlew
+#   tags:
+#     - AS_testing1
+#   script:
+#     - cd frontend/CyShareAndroid
+#     - ./gradlew test
