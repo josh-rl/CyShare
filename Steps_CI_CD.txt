@@ -1,0 +1,6 @@
+Steps to Deploy (SB):
+1. Generetate .jar file
+2. Cp/mv -> Move jar to server.
+3. Run the .jar -> java -jar FileName
+
+Steps:
